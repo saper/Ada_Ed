@@ -16,7 +16,7 @@ LFLAGS=
 
 INSTALL = install
 
-BINDIR = /usr/local
+BINDIR = /usr/local/bin
 LIBDIR = /usr/local/lib
 MANDIR = /usr/local/man
 
