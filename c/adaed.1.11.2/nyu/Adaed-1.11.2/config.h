@@ -30,6 +30,9 @@
  * 8 byte boundaries. (e.g. SPARC).
  */
 
+#ifdef __FreeBSD__
+#define BSD
+#endif
 #ifdef sun
 #define WORDSIZE32
 #ifndef BSD
@@ -135,6 +138,8 @@
 #define DEBUG_INT
 #endif
 #endif
+
+#define WORDSIZE32
 
 #ifdef WORDSIZE32
 #define DIGS	4

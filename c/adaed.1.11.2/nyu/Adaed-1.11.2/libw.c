@@ -32,7 +32,7 @@ extern "C"
 #ifdef BSD
 /* Needed for cleanup_files routine */
 #include <sys/types.h>
-#include <sys/dir.h>
+#include <dirent.h>
 #endif
 
 #ifdef SYSTEM_V
@@ -1348,7 +1348,7 @@ void cleanup_files()										/*;cleanup_files*/
 	 */
 #ifdef BSD
 	DIR *dirp;
-	struct direct *dp;
+	struct dirent *dp;
 #endif
 
 #ifdef SYSTEM_V

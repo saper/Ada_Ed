@@ -33,6 +33,8 @@
 #include "sspansprots.h"
 
 
+int getopt(int argc, char * const argv[], const char *optstring);
+
 static void lrparse();
 static void errorinit(struct two_pool **, struct two_pool **, int *);
 static void exitf(int);

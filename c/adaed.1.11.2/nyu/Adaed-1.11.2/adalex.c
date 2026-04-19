@@ -9,7 +9,7 @@
 
 /*			Lexical scanner for ADA 
 
-One line of text at a time is read in using getline(). Tokens are scanned
+One line of text at a time is read in using our_getline(). Tokens are scanned
 for, and gettok() returns one token at a time to the parser. What is actually
 returned is a pointer to a structure for the parse stack capable of holding
 the token. No initialization is needed, as it has all been done statically
@@ -24,7 +24,7 @@ the token. No initialization is needed, as it has all been done statically
 #include "errsprots.h"
 #include "adalexprots.h"
 
-static int getline();
+static int our_getline();
 static struct prsstack *newtoken(int, int, int, int);
 static int isdecimal(char);
 static int ishex(char);
@@ -104,7 +104,7 @@ int src_index = -1;		/* Index into source lines buffer */
 */
 
 
-static int getline()											/*;getline*/
+static int our_getline()											/*;getline*/
 {
 	int ch, ind = 0;
 
@@ -496,7 +496,7 @@ struct prsstack *gettok()										/*;gettok*/
 				line++;
 			}
 		}
-		if (getline() == EOF)
+		if (our_getline() == EOF)
 			return(newtoken(EOFT_SYM, EOFT_SYM, lineno, colno));
 	}
 }

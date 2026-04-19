@@ -29,6 +29,8 @@ static int is_subunit(char *);
 static char *formatted_name(char *);
 static char *formatted_stub(char *);
 
+int getopt(int argc, char * const argv[], const char *optstring);
+
 IFILE *LIBFILE;
 #ifdef IBM_PC
 /* on the PC, a chdir must be undone before program completes.

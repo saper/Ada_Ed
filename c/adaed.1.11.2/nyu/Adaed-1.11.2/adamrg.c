@@ -40,6 +40,10 @@
 #include <sys/resource.h>
 #endif
 
+#if defined(__FreeBSD__)
+#define OP_SYS "FreeBSD"
+#endif
+
 
 #ifdef IBM_PC
 #include "time.h"
